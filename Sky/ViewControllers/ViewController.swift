@@ -9,7 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+	lazy var topView: ShowTheWeatherView = {
+		let view = ShowTheWeatherView()
+		view.backgroundColor = .brown
+		return view
+	}()
 	override func loadView() {
 		super.loadView()
 		self.configureUI()
@@ -19,6 +23,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		self.basicSetting()
+		self.networkSetting()
 	}
 	
 	func basicSetting() {
@@ -26,14 +31,21 @@ class ViewController: UIViewController {
 	}
 	
 	func configureUI() {
-		let topView = ShowTheWeatherView()
-		topView.backgroundColor = .brown
 		self.view.addSubview(topView)
 		topView.snp.makeConstraints { (make) in
 			make.top.equalToSuperview().offset(SB_HEIGHT)
 			make.right.left.equalToSuperview()
 			make.height.equalToSuperview().multipliedBy(0.4)
 		}
+	}
+	
+	func networkSetting() {
+		let date = Date()
+		let formatter = DateFormatter()
+		formatter.dateStyle = .full
+		topView.dateLabel.text = formatter.string(from: date)
+		topView.temperatureLabel.text = "33.5℃"
+		topView.humidityLabel.text = "63%"
 	}
 }
 

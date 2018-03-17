@@ -16,21 +16,50 @@ class ShowTheWeatherView: UIView {
 		imgView.contentMode = .scaleAspectFit
 		return imgView
 	}()
-
+	
 	lazy var locationBtn: UIButton = {
 		let btn = UIButton()
 		btn.setImage(#imageLiteral(resourceName: "LocationBtn"), for: .normal)
-//		btn.adjustsImageWhenHighlighted = false
 		return btn
 	}()
 	
 	lazy var settingBtn: UIButton = {
 		let btn = UIButton()
 		btn.setImage(#imageLiteral(resourceName: "Setting"), for: .normal)
-//		btn.adjustsImageWhenHighlighted = false
 		return btn
 	}()
-
+	
+	lazy var weatherLabel: UILabel = {
+		let label = UILabel()
+		label.font = UIFont(name: "Arial-ItalicMT", size: 18)
+		label.sizeToFit()
+		return label
+	}()
+	
+	lazy var dateLabel: UILabel = {
+		let label = UILabel()
+		label.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 17)
+		label.textColor = .red
+		label.sizeToFit()
+		return label
+	}()
+	
+	lazy var temperatureLabel: UILabel = {
+		let label = UILabel()
+		label.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 28)
+		label.textAlignment = .center
+		label.sizeToFit()
+		return label
+	}()
+	
+	lazy var humidityLabel: UILabel = {
+		let label = UILabel()
+		label.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 28)
+		label.textAlignment = .center
+		label.sizeToFit()
+		return label
+	}()
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		self.configureUI()
@@ -40,6 +69,9 @@ class ShowTheWeatherView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+}
+
+extension ShowTheWeatherView {
 	func configureUI() {
 		weatherImgView.image = #imageLiteral(resourceName: "clear-day")
 		self.addSubview(weatherImgView)
@@ -47,6 +79,7 @@ class ShowTheWeatherView: UIView {
 			make.width.height.equalTo(equalScaling(size: 128))
 			make.center.equalToSuperview()
 		}
+		
 		self.addSubview(locationBtn)
 		locationBtn.snp.makeConstraints { (make) in
 			make.width.height.equalTo(equalScaling(size: 44))
@@ -59,6 +92,32 @@ class ShowTheWeatherView: UIView {
 			make.top.equalToSuperview().offset(equalScaling(size: 8))
 			make.right.equalToSuperview().inset(equalScaling(size: 8))
 		}
+		
+		self.addSubview(weatherLabel)
+		weatherLabel.text = "Clear"
+		weatherLabel.snp.makeConstraints { (make) in
+			make.top.equalTo(weatherImgView.snp.bottom).offset(equalScaling(size: 8))
+			make.centerX.equalToSuperview()
+		}
+		
+		self.addSubview(dateLabel)
+		dateLabel.snp.makeConstraints { (make) in
+			make.top.equalTo(weatherLabel.snp.bottom).offset(equalScaling(size: 8))
+			make.centerX.equalToSuperview()
+		}
+		
+		self.addSubview(temperatureLabel)
+		temperatureLabel.snp.makeConstraints { (make) in
+			make.left.equalToSuperview().offset(equalScaling(size: 8))
+			make.right.equalTo(weatherImgView.snp.left).offset(-equalScaling(size: 8))
+			make.centerY.equalToSuperview()
+		}
+		
+		self.addSubview(humidityLabel)
+		humidityLabel.snp.makeConstraints { (make) in
+			make.right.equalToSuperview().offset(equalScaling(size: 8))
+			make.left.equalTo(weatherImgView.snp.right).offset(equalScaling(size: 8))
+			make.centerY.equalToSuperview()
+		}
 	}
-	
 }
