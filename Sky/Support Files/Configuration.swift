@@ -14,4 +14,8 @@ let SC_HEIGHT = UIScreen.main.bounds.size.height
 
 let SB_HEIGHT = UIApplication.shared.statusBarFrame.height
 
+func equalScaling(size: Double) -> Double {
+	let proportion = Double(SC_WIDTH) / 375
+	return size * proportion
+}
 

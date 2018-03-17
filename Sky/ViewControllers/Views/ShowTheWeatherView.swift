@@ -17,6 +17,20 @@ class ShowTheWeatherView: UIView {
 		return imgView
 	}()
 
+	lazy var locationBtn: UIButton = {
+		let btn = UIButton()
+		btn.setImage(#imageLiteral(resourceName: "LocationBtn"), for: .normal)
+//		btn.adjustsImageWhenHighlighted = false
+		return btn
+	}()
+	
+	lazy var settingBtn: UIButton = {
+		let btn = UIButton()
+		btn.setImage(#imageLiteral(resourceName: "Setting"), for: .normal)
+//		btn.adjustsImageWhenHighlighted = false
+		return btn
+	}()
+
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		self.configureUI()
@@ -27,7 +41,24 @@ class ShowTheWeatherView: UIView {
 	}
 	
 	func configureUI() {
+		weatherImgView.image = #imageLiteral(resourceName: "clear-day")
+		self.addSubview(weatherImgView)
+		weatherImgView.snp.makeConstraints { (make) in
+			make.width.height.equalTo(equalScaling(size: 128))
+			make.center.equalToSuperview()
+		}
+		self.addSubview(locationBtn)
+		locationBtn.snp.makeConstraints { (make) in
+			make.width.height.equalTo(equalScaling(size: 44))
+			make.top.left.equalToSuperview().offset(equalScaling(size: 8))
+		}
 		
+		self.addSubview(settingBtn)
+		settingBtn.snp.makeConstraints { (make) in
+			make.width.height.equalTo(equalScaling(size: 44))
+			make.top.equalToSuperview().offset(equalScaling(size: 8))
+			make.right.equalToSuperview().inset(equalScaling(size: 8))
+		}
 	}
 	
 }
