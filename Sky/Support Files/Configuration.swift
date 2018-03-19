@@ -19,3 +19,34 @@ func equalScaling(size: Double) -> Double {
 	return size * proportion
 }
 
+extension UIColor {
+	class func hexadecimalColorConversion(hexadecimalValue: String) -> UIColor {
+		var cstr = hexadecimalValue.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+		if cstr.count < 6 {
+			return .clear
+		}
+		if cstr.hasPrefix("0x") {
+			let startIndex = cstr.index(cstr.startIndex, offsetBy: 2)
+			cstr = String(cstr[startIndex...])
+		}
+		if cstr.hasPrefix("#") {
+			let startIndex = cstr.index(cstr.startIndex, offsetBy: 1)
+			cstr = String(cstr[startIndex...])
+		}
+		if cstr.count != 6 {
+			return .clear
+		}
+		
+		
+//		let rStr = cstr[0..<2]
+		
+		
+//		let bStr = cstr.substring(with: range)
+		var r:UInt32 = 0x0
+		var g:UInt32 = 0x0
+		var b: UInt32 = 0x0
+//		Scanner.init(string: rStr)
+		return .white
+	}
+}
+

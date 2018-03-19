@@ -109,7 +109,7 @@ extension ShowTheWeatherView {
 		self.addSubview(temperatureLabel)
 		temperatureLabel.snp.makeConstraints { (make) in
 			make.left.equalToSuperview().offset(equalScaling(size: 8))
-			make.right.equalTo(weatherImgView.snp.left).offset(-equalScaling(size: 8))
+			make.right.equalTo(weatherImgView.snp.left).offset(equalScaling(size: -8))
 			make.centerY.equalToSuperview()
 		}
 		
