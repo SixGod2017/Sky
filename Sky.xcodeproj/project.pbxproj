@@ -16,7 +16,8 @@
 		FD46C853205CC58400569B93 /* SkyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46C852205CC58400569B93 /* SkyTests.swift */; };
 		FD46C85E205CC58400569B93 /* SkyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46C85D205CC58400569B93 /* SkyUITests.swift */; };
 		FD46C873205CC91400569B93 /* ShowTheWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46C872205CC91400569B93 /* ShowTheWeatherView.swift */; };
-		FD46C875205CFF2B00569B93 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46C874205CFF2B00569B93 /* Configuration.swift */; };
+		FD46C875205CFF2B00569B93 /* BasicConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46C874205CFF2B00569B93 /* BasicConfiguration.swift */; };
+		FD63CA4F206A402100B24D90 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63CA4E206A402100B24D90 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,8 @@
 		FD46C85D205CC58400569B93 /* SkyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyUITests.swift; sourceTree = "<group>"; };
 		FD46C85F205CC58400569B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD46C872205CC91400569B93 /* ShowTheWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTheWeatherView.swift; sourceTree = "<group>"; };
-		FD46C874205CFF2B00569B93 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		FD46C874205CFF2B00569B93 /* BasicConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicConfiguration.swift; sourceTree = "<group>"; };
+		FD63CA4E206A402100B24D90 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				FD46C849205CC58400569B93 /* Info.plist */,
-				FD46C874205CFF2B00569B93 /* Configuration.swift */,
+				FD46C874205CFF2B00569B93 /* BasicConfiguration.swift */,
+				FD63CA4E206A402100B24D90 /* UIColor+Extension.swift */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -376,10 +379,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sky/Pods-Sky-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,8 +401,9 @@
 			files = (
 				FD46C840205CC58400569B93 /* ViewController.swift in Sources */,
 				FD46C873205CC91400569B93 /* ShowTheWeatherView.swift in Sources */,
-				FD46C875205CFF2B00569B93 /* Configuration.swift in Sources */,
+				FD46C875205CFF2B00569B93 /* BasicConfiguration.swift in Sources */,
 				FD46C83E205CC58400569B93 /* AppDelegate.swift in Sources */,
+				FD63CA4F206A402100B24D90 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

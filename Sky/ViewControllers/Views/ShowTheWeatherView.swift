@@ -12,7 +12,7 @@ import SnapKit
 class ShowTheWeatherView: UIView {
 	
 	lazy var weatherImgView: UIImageView = {
-		let imgView = UIImageView()
+		let imgView = UIImageView(image: #imageLiteral(resourceName: "clear-day"))
 		imgView.contentMode = .scaleAspectFit
 		return imgView
 	}()
@@ -39,7 +39,7 @@ class ShowTheWeatherView: UIView {
 	lazy var dateLabel: UILabel = {
 		let label = UILabel()
 		label.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 17)
-		label.textColor = .red
+		label.textColor = UIColor(displayP3Red: 233/255.0, green: 77/255.0, blue: 58/255.0, alpha: 1.0)
 		label.sizeToFit()
 		return label
 	}()
@@ -73,7 +73,6 @@ class ShowTheWeatherView: UIView {
 
 extension ShowTheWeatherView {
 	func configureUI() {
-		weatherImgView.image = #imageLiteral(resourceName: "clear-day")
 		self.addSubview(weatherImgView)
 		weatherImgView.snp.makeConstraints { (make) in
 			make.width.height.equalTo(equalScaling(size: 128))
