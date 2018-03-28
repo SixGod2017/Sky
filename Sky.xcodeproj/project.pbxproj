@@ -18,6 +18,8 @@
 		FD46C873205CC91400569B93 /* ShowTheWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46C872205CC91400569B93 /* ShowTheWeatherView.swift */; };
 		FD46C875205CFF2B00569B93 /* BasicConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46C874205CFF2B00569B93 /* BasicConfiguration.swift */; };
 		FD63CA4F206A402100B24D90 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63CA4E206A402100B24D90 /* UIColor+Extension.swift */; };
+		FD63CA51206A40F300B24D90 /* NetWorkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63CA50206A40F300B24D90 /* NetWorkConfiguration.swift */; };
+		FD63CA53206A5C5F00B24D90 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63CA52206A5C5F00B24D90 /* Dictionary+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		FD46C872205CC91400569B93 /* ShowTheWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTheWeatherView.swift; sourceTree = "<group>"; };
 		FD46C874205CFF2B00569B93 /* BasicConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicConfiguration.swift; sourceTree = "<group>"; };
 		FD63CA4E206A402100B24D90 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		FD63CA50206A40F300B24D90 /* NetWorkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkConfiguration.swift; sourceTree = "<group>"; };
+		FD63CA52206A5C5F00B24D90 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +188,9 @@
 			children = (
 				FD46C849205CC58400569B93 /* Info.plist */,
 				FD46C874205CFF2B00569B93 /* BasicConfiguration.swift */,
+				FD63CA50206A40F300B24D90 /* NetWorkConfiguration.swift */,
 				FD63CA4E206A402100B24D90 /* UIColor+Extension.swift */,
+				FD63CA52206A5C5F00B24D90 /* Dictionary+Extension.swift */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -400,6 +406,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD46C840205CC58400569B93 /* ViewController.swift in Sources */,
+				FD63CA53206A5C5F00B24D90 /* Dictionary+Extension.swift in Sources */,
+				FD63CA51206A40F300B24D90 /* NetWorkConfiguration.swift in Sources */,
 				FD46C873205CC91400569B93 /* ShowTheWeatherView.swift in Sources */,
 				FD46C875205CFF2B00569B93 /* BasicConfiguration.swift in Sources */,
 				FD46C83E205CC58400569B93 /* AppDelegate.swift in Sources */,
