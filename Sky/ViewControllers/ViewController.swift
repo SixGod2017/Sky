@@ -40,10 +40,11 @@ class ViewController: UIViewController {
 	}
 	
 	func networkSetting() {
-		print(GDMNetWork.share.getCompleteUrl(url: "sss"))
-		print(GDMNetWork.share.baseParam)
-		let params = ["sex": "男"]
-		print(GDMNetWork.share.combineParams(params: params))
+		WeatherDataManager.shared.weatherDataAt(latitude: 37.8267, longitude: -122.4233) { (model, error) in
+			print(model)
+			print(error)
+		}
+//		let params = ["sex": "男"]
 		let date = Date()
 		let formatter = DateFormatter()
 		formatter.dateStyle = .full

@@ -8,8 +8,6 @@
 
 import UIKit
 
-let darkSkySecretKey = "50a2b28f1871f27381f79468c0540bfb"
-
 let SC_WIDTH = UIScreen.main.bounds.size.width
 let SC_HEIGHT = UIScreen.main.bounds.size.height
 

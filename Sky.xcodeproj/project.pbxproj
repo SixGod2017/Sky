@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1818504C38A872F4830E4747 /* Pods_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D9B86DC9F9C4A082D52E5F /* Pods_Sky.framework */; };
+		FD055CC7206E245400CA4F3A /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD055CC6206E245400CA4F3A /* WeatherDataManager.swift */; };
+		FD0DF9E0206E1F8C00CB40AB /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0DF9DF206E1F8C00CB40AB /* LocationModel.swift */; };
+		FD0DF9E2206E212200CB40AB /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0DF9E1206E212200CB40AB /* WeatherDataModel.swift */; };
+		FD0DF9E5206E229000CB40AB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0DF9E4206E229000CB40AB /* API.swift */; };
 		FD46C83E205CC58400569B93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46C83D205CC58400569B93 /* AppDelegate.swift */; };
 		FD46C840205CC58400569B93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46C83F205CC58400569B93 /* ViewController.swift */; };
 		FD46C843205CC58400569B93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD46C841205CC58400569B93 /* Main.storyboard */; };
@@ -43,6 +47,10 @@
 		0B5619DB01B17F69058D3966 /* Pods-Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sky.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sky/Pods-Sky.release.xcconfig"; sourceTree = "<group>"; };
 		3E20D5CA4BDF5070AC580079 /* Pods-Sky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sky.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sky/Pods-Sky.debug.xcconfig"; sourceTree = "<group>"; };
 		94D9B86DC9F9C4A082D52E5F /* Pods_Sky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD055CC6206E245400CA4F3A /* WeatherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
+		FD0DF9DF206E1F8C00CB40AB /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		FD0DF9E1206E212200CB40AB /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		FD0DF9E4206E229000CB40AB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		FD46C83A205CC58400569B93 /* Sky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD46C83D205CC58400569B93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD46C83F205CC58400569B93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +114,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FD0DF9DE206E1F6200CB40AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD0DF9DF206E1F8C00CB40AB /* LocationModel.swift */,
+				FD0DF9E1206E212200CB40AB /* WeatherDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD0DF9E3206E226D00CB40AB /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				FD0DF9E4206E229000CB40AB /* API.swift */,
+				FD055CC6206E245400CA4F3A /* WeatherDataManager.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		FD46C831205CC58400569B93 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +157,8 @@
 		FD46C83C205CC58400569B93 /* Sky */ = {
 			isa = PBXGroup;
 			children = (
+				FD0DF9E3206E226D00CB40AB /* Configuration */,
+				FD0DF9DE206E1F6200CB40AB /* Model */,
 				FD46C870205CC75900569B93 /* ViewControllers */,
 				FD46C86F205CC73800569B93 /* Support Files */,
 				FD46C86E205CC72000569B93 /* Storyboards */,
@@ -407,8 +435,12 @@
 			files = (
 				FD46C840205CC58400569B93 /* ViewController.swift in Sources */,
 				FD63CA53206A5C5F00B24D90 /* Dictionary+Extension.swift in Sources */,
+				FD055CC7206E245400CA4F3A /* WeatherDataManager.swift in Sources */,
+				FD0DF9E0206E1F8C00CB40AB /* LocationModel.swift in Sources */,
 				FD63CA51206A40F300B24D90 /* NetWorkConfiguration.swift in Sources */,
+				FD0DF9E5206E229000CB40AB /* API.swift in Sources */,
 				FD46C873205CC91400569B93 /* ShowTheWeatherView.swift in Sources */,
+				FD0DF9E2206E212200CB40AB /* WeatherDataModel.swift in Sources */,
 				FD46C875205CFF2B00569B93 /* BasicConfiguration.swift in Sources */,
 				FD46C83E205CC58400569B93 /* AppDelegate.swift in Sources */,
 				FD63CA4F206A402100B24D90 /* UIColor+Extension.swift in Sources */,
